@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:background="@color/cardview_light_background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="318dp"
+            android:src="@drawable/mmusicicon"
+
+            />
+
+        <TextView
+            android:id="@+id/songLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Song Name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="22sp"
+
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:orientation="vertical"
+       android:background="@color/cardview_light_background"
+           android:layout_weight="3"
+       >
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:padding="5dp">
+
+           <SeekBar
+               android:layout_width="match_parent"
+               android:layout_height="5dp"
+               android:id="@+id/seekbar"
+               android:background="@color/cardview_dark_background"
+               android:layout_alignParentBottom="true"
+               android:layout_marginBottom="100dp"
+               />
+
+           <Button
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:layout_centerHorizontal="true"
+               android:background="@drawable/icon_pause"
+               android:id="@+id/pause"
+               android:layout_marginTop="5dp"
+
+               />
+
+           <Button
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:id="@+id/next"
+               android:layout_toRightOf="@id/pause"
+               android:layout_marginTop="15dp"
+               android:background="@drawable/icon_next"
+
+               />
+
+           <Button
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:id="@+id/previous"
+               android:layout_toLeftOf="@id/pause"
+               android:layout_marginTop="15dp"
+               android:background="@drawable/icon_previous"
+
+
+               />
+
+       </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
